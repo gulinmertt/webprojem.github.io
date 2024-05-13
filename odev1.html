@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <!-- meta charset="UTF-8" = bunu kullanarak web sayfaının farklı dillerdeki kullanıcılara erişilebilir olmasını sağlanır -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- web sayfasının nasıl görüneceği ayarlanır  -->
+        <!-- meta name="viewport" = bir web sayfasının farklı cihazlarda, özellikle mobil cihazlarda nasıl görüntülendiğini kontrol eder.-->
+        <!-- width=device-width = tarayıcılar, bu sayede web sayfasının genişliğini cihazın ekran genişliğine göre ayarlar. -->
+        <!-- initial-scale=1.0 = tarayıcılar, bu sayede web sayfasının ilk zoom seviyesini %100 olarak ayarlar. -->
+        <title>Gülin'in Bloğu</title> <!-- Web sayfasının başlığı --> 
+        <link rel="stylesheet" href="odev1.css" /> <!-- css dosyasıyla bağlanır --> 
+        <script src="odev3.js" defer></script>
+    </head>
+
+    <body>
+        <header> <!-- en üst / başlık / giriş kısmı -->
+            <h1>Gülin'in Bloğu</h1> <!-- başlık -->
+            <p><span class="baslik">Bloğuma Hoşgeldiniz</span></p> <!-- paragraf (p) -->
+            <!-- span = bir metin bloğuna stil (css kısmı) veya özellik (class, id) eklemeyi sağlar -->
+        </header>
+
+        <nav> <!-- menü kısmını oluşturur -->
+            <ul>
+                <li><a href="http://127.0.0.1:5500/odev1.html">Anasayfa</a></li> <!-- link eklenmesini ve yazılan değerin linkle eşleşmesi sağlanır -->
+                <li><a href="https://drive.google.com/drive/folders/1_Ih2yBsRrS6UpsMysDVVzYEfXVk7tW56?usp=share_link">Projelerim</a></li>
+                <li><a href="http://127.0.0.1:5500/odev2.html">Hakkımda</a></li>
+                <li><a href="https://www.linkedin.com/in/gülin-mert/">Profesyonel İletişim / Sosyal Medya </a></li>
+            </ul>
+        </nav>
+
+        <section> <!-- orta / bağımsız kısım -->
+            <article> <!-- içerik eklemeyi sağlar -->
+                <h2>Ben Kimim?</h2> <!-- başlık -->
+                <p>Ben Gülin Mert. 20 yaşındayım. Yönetim Bilişim Sistemleri 3. sınıf öğrencisiyim.</br> <!-- </br> = satır aşağına inmeyi sağlar-->
+                    Veri analizi üzerine kendimi geliştiriyorum ve kariyerimi bu alan üzerine oluşturmaya çalışıyorum.</p> </br>
+                <h2>Hedefim</h2>
+                <p>Burada yaptığım projeleri, yeteneklerimi, ilgi alanlarımı profesyonel bir şekilde göstermek istiyorum.</br> 
+                    Aynı zamanda benim gözümden dünyayı paylaşmayı hedefliyorum.</p> </br>
+            </article>
+
+            <div class="photo-gallery">
+                <div class="photo">
+                    <h3>Veri Analizi</h3>
+                    <img src="https://www.iakademi.com/wp-content/uploads/2021/10/veri-analizi-nedir-nasil-yapilir-1024x500.jpg" alt="Veri Analizi">
+                </div>
+                <div class="photo hidden">
+                    <h3>Veri Görselleştirme</h3>
+                    <img src="https://mektebiendustri.com/wp-content/uploads/2021/06/Data-Visualization_Featured-Image-1.png" alt="Veri Görselleştirme">
+                </div>
+                <div class="photo hidden">
+                    <h3>İstatistik</h3>
+                    <img src="https://www.istmer.com/wp-content/uploads/2020/09/veri-gorsellestirme-serpilme-diyagrami.jpg" alt="İstatistik">
+                </div>
+                <div class="photo hidden">
+                    <h3>Pythonda Veri Görselleştirme</h3>
+                    <img src="https://i.ytimg.com/vi/aYY0l6j-UQg/maxresdefault.jpg" alt="Pythonda Veri Görselleştirme">
+                </div>
+                <div class="photo hidden">
+                    <h3>R Ekranı</h3>
+                    <img src="https://i0.wp.com/oyasanli.com/oyasblog/wp-content/uploads/2021/05/2021-05-11.png?resize=700%2C373&ssl=1" alt="R Ekranı">
+                </div>
+            </div>
+
+            
+        </section>
+
+        <div id="hpr"> <!--  yetenek ve hobileri kapsayan bloğu oluşturur -->
+            <div id="skills">
+                <h2>Profesyonel Yeteneklerim</h2>
+                <p>
+                    <span class="hwr"> - Veri analizi</span></br> <!-- span class = özellik ekler -->
+                    <span class="hwr"> - Veri Görselleştirme</span></br>
+                    <span class="hwr"> - R</span></br>
+                    <span class="hwr"> - Python</span></br>
+                    <span class="hwr"> - İstatistik</span></br>
+                    <span class="hwr"> - SQL</span></br>
+                    <span class="hwr"> - PowerBI</span></br>
+                    <span class="hwr"> - Looker Studio</span></br>
+                    <span class="hwr"> - Dataprep</span></br>
+                    <span class="hwr"> - Makine Öğrenimi</span>
+                </p>
+            </div>
+
+            <div id="hobbies">
+                <h2>Hobilerim</h2>
+                <p>
+                    <span class="hwr"> - Resim yapmak</span></br>
+                    <span class="hwr"> - Seyahat etmek</span></br>
+                    <span class="hwr"> - Fotoğraf çekmek</span></br>
+                    <span class="hwr"> - Müzik dinlemek</span></br>
+                    <span class="hwr"> - Kendimi geliştirmek</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="contactform"> <!-- div class = grup oluşturur -->
+            <h4>İletmek İstedikleriniz</h4>
+            <form id="contact-form"> <!--  form oluşturur -->
+                <label for="name-and-surname">İsim ve Soyad:</label><br>
+                <input type="text" id="name-and-surname" name="name-and-surname"><br>
+                <label for="email">E-posta:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Mesaj:</label><br>
+                <textarea id="message" name="message" rows="10" cols="60"></textarea><br> 
+                <!-- textarea = mesaj yazılan part, rows = satır boyutunu ayarlar, cols = sütun boyutunu ayarlar -->
+                <input type="submit" value="Gönder">
+            </form>
+        </div>
+
+        <footer> <!-- en son kısım -->
+            <p id="communication">
+                <span> <strong> İletişim Bilgileri </strong> </span> </br> <!-- strong = vurgulu-->
+                <span class="hwr"> Tel no: +90 534 793 1448 </span></br>
+                <span class="hwr"> E-mail: gulinmert003@hotmail.com </span></br>
+                <span class="hwr"> Adres: Ankara, Türkiye </span></br>
+                <span class="hwr"> Linkedin: Profesyonel İletişim / Sosyal Medya'a tıklayabilirsiniz </span>
+            </p>
+
+            <p>&copy; 2024 Gülin'in Bloğu. Tüm hakları saklıdır.</p> <!-- &copy; = © -->
+        </footer>
+    </body>
+</html>

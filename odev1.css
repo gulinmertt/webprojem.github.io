@@ -1,0 +1,218 @@
+* { /* * = tüm html seçicilerinin seçildiğini gösterir */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+    /* elementin genişliğini ve yüksekliğini, içeriği ve dolgu alanını kapsayacak şekilde hesaplar, kenar boşluğu ve dış boşluk dahil etmez */
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif; /* yazı fontu ayarlanır */
+    display: flex; /* flex konteynırı olarak işaretler */ 
+    flex-direction: column; /* flex konteynırındaki öğeleri sütun halinde hizalar */ 
+    margin: 0px; /* kenarlıkla öğeler arasındaki boşluk ayarlanır */
+    padding: 0px; /* içerikle kenarlık arasındaki boşluk ayarlanır */
+    background-color:whitesmoke;
+    min-height: 100vh; /* minimum yüksekliğin en az %100 olması sağlanır / vh=viewport */ 
+}
+
+header {
+    background-color:lavender; /* arkaplan rengi ayarlanır */
+    color:black; /* yazı rengi ayarlanır */
+    padding: 20px;
+    text-align: center; /* yazının hizası ayarlanır / burada merkez olarak ayarlandı */
+}
+
+.baslik { /* class="baslik" */
+    background-color:rgb(193, 193, 214);
+}
+
+nav {
+    background-color: rgb(197, 211, 236);
+    color: black;
+    padding: 10px;
+    text-align: center; /* yazının konumu ayarlanır */
+}
+
+nav ul {
+    list-style-type: none; 
+    /* numaralandırılmamış veya sıralı listelerden varsayılan tireleri, sayıları veya diğer işaretleyicileri kaldırır */
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li {
+    display: inline; /* elemanın içeriğinin bulunduğu satır boyunca sıralanmasını sağlar. */
+    margin: 0 10px;
+    /* 0 = üst ve alt kenar boşluğunun olmadığı anlamına gelir. */
+    /* 10 =  sağ ve sol kenar boşluğunun 10 piksel olduğu anlamına gelir. */ 
+}
+
+nav ul li a {
+    text-decoration: none; 
+    /* metin parçasının (özellikle bağlantıların) altını çizme özelliğini kaldırır */
+    color: black;
+}
+
+section {
+    flex: 1; /* öğenin diğer flex öğeleriyle aynı esnekliğe sahip olmasını sağlar. */
+    height: 280px; /* öğenin yüksekliğini belirlenir. */
+    width: 50%; /* öğenin genişliği belirlenir. */
+    padding: 20px;
+    background-color: whitesmoke;
+    text-align: center; /* yazılanı merkeze alır / ortalar  */
+}
+
+article {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px; /* elemanın / border'ın kenarlarının yuvarlatılmasını sağlar */
+    max-width: 1000px; /* elemanın maksimum genişliğini belirler. */
+    margin: 0px auto;
+    /* 0px = üst, alt, sağ ve sol kenar boşluklarının olmadığını belirtir */
+    /* auto = eleman otomatik olarak kapsayıcısının ortasına hizalanır
+    /* border: 1px solid black; */
+    
+}      
+
+#hpr { /* id= "hpr" */
+    display: flex; /* esnek kutu olarak düzenlenmesini sağlar */
+    flex-direction: row; /*  öğeler yatay olarak sıralanır, */
+    justify-content: flex-end; /* konteyner içinde yatay olarak hizalanma yöntemini belirtir */
+    align-items: center; /* konteyner içinde dikey olarak hizalanma yöntemini belirtir */
+}
+
+
+#skills { /* id= "skills" */
+    padding: 20px;
+    background-color: rgb(197, 211, 236);
+    /* margin-left: 10px; */
+    margin-right: 90px;
+    margin-top: -875px;
+    animation-name: hprBox1;
+    animation-duration: 2s; /* Animasyon süresi 2 saniye olarak ayarlar */
+    animation-iteration-count: 3; /* Animasyon 3 kez tekrarlanır */
+    animation-direction: normal; /* Animasyon sağdan sola doğru çalışır */
+    animation-play-state: running; /* animasyonun devam ettiğini gösterir */
+    animation-timing-function: ease-in-out; /* animasyonun nasıl ilerlediğini belirtir ve burada başlangıç ve bitiş noktalarında yavaşlar, ortada hızlanır */ 
+}
+
+/* kutuyu döndüren animasyonu 1 */
+@keyframes hprBox1 { 
+    from {
+        transform: rotate(0deg); /* Animasyon 0 dereceden başlar */
+    }
+    to {
+        transform: rotate(360deg); /* Animasyon 360 derecede biter */
+    }
+}
+
+#hobbies{ /* id= "hobbies" */
+    padding: 20px;
+    background-color: rgb(197, 211, 236);
+    margin-right: 50px;
+    margin-top: -870px; 
+    /* öğenin üst kenarı ile üstteki öğenin alt kenarı arasındaki boşluğu kontrol eder */
+    animation-name: hprBox2;
+    animation-duration: 2s; /* Animasyon süresi 2 saniye olarak ayarlar */
+    animation-iteration-count: 3; /* Animasyon 3 kez tekrarlanır */
+    animation-direction: reverse; /* Animasyon soldan sağa doğru çalışır */
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+/* kutuyu döndüren css animasyonu 2 */
+@keyframes hprBox2 { 
+    from {
+        transform: rotate(0deg); /* Animasyon 0 dereceden başlar */
+    }
+    to {
+        transform: rotate(360deg); /* Animasyon 360 derecede biter */
+    }
+}
+
+footer {
+    background-color: lavender;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; 
+}
+
+#communication { /* id= "communication" */
+    background-color: lavender;
+    color: black;
+    padding: 20px;
+    text-align: left;
+}
+
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.photo {
+    width: 1000px; /* Fotoğrafın genişliği */
+    margin: 10px; /* Fotoğrafın kenar boşluğu */
+}
+
+.photo img {
+    width: 100%; /* Resmin genişliği */
+    height: auto; /* Resmin oranını koru */
+}
+
+.hidden { /* Tüm fotoğrafları varsayılan olarak gizler */
+    display: none;
+}
+
+.contactform {
+    margin-top: 230px; /* Form ile fotoğraflar arasındaki boşluk */
+}
+
+.contactform form {
+    /* Formun genel stil ayarları */
+    margin-top: 10px; /* Formun üstündeki boşluk */
+    padding: 20px;
+    background-color: rgb(197, 211, 236);
+}
+
+.contactform h4 {
+    /* Form başlığının stili */
+    font-size: 1.5rem;
+    margin-bottom: 10px; /* Başlık ile form arasındaki boşluk */
+    margin-top: 10px; /* Formun üstündeki boşluğu kaldırdım */
+}
+
+.contactform label {
+    /* Etiketlerin stili */
+    font-weight: bold;
+}
+
+.contactform input[type="text"],
+.contactform input[type="email"],
+.contactform textarea {
+    /* Input ve textarea alanlarının stili */
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contactform input[type="submit"] {
+    /* Gönder butonunun stili */
+    background-color: darkgray;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contactform input[type="submit"]:hover {
+    /* Gönder butonuna fare üzerine gelindiğindeki stili */
+    background-color: lightgray;
+}

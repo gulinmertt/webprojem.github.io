@@ -1,0 +1,110 @@
+* { /* * = tüm html seçicilerinin seçildiğini gösterir */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* elementin genişliğini ve yüksekliğini, içeriği ve dolgu alanını kapsayacak şekilde hesaplar, kenar boşluğu ve dış boşluk dahil etmez */
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif; /* yazı fontu ayarlanır */
+    display: flex; /* flex konteynırı olarak işaretler */ 
+    flex-direction: column; /* flex konteynırındaki öğeleri sütun halinde hizalar */ 
+    margin: 0px; /* kenarlıkla öğeler arasındaki boşluk ayarlanır */
+    padding: 0px; /* içerikle kenarlık arasındaki boşluk ayarlanır */
+    background-color:whitesmoke;
+    min-height: 100vh; /* minimum yüksekliğin en az %100 olması sağlanır / vh=viewport */ 
+}
+
+header {
+    background-color:lavender; /* arkaplan rengi ayarlanır */
+    color:black; /* yazı rengi ayarlanır */
+    padding: 20px;
+    text-align: center; /* yazının hizası ayarlanır / burada merkez olarak ayarlandı */
+}
+
+.baslik {
+    background-color:rgb(193, 193, 214);
+}
+
+nav {
+    background-color:rgb(197, 211, 236);
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; 
+    /* numaralandırılmamış veya sıralı listelerden varsayılan tireleri, sayıları veya diğer işaretleyicileri kaldırır */
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li {
+    display: inline;/* elemanın içeriğinin bulunduğu satır boyunca sıralanmasını sağlar. */
+    margin: 0 10px;
+    /* 0 = üst ve alt kenar boşluğunun olmadığı anlamına gelir. */
+    /* 10 =  sağ ve sol kenar boşluğunun 10 piksel olduğu anlamına gelir. */ 
+}
+
+nav ul li a {
+    text-decoration: none; /* metin parçasının (özellikle bağlantıların) altını çizme özelliğini kaldırır */
+    color: black;
+}
+
+#first {
+    flex: 1; /* öğenin diğer flex öğeleriyle aynı esnekliğe sahip olmasını sağlar. */
+    height: 250px; /* öğenin yüksekliğini belirlenir. */
+    width: 50%; /* öğenin genişliği belirlenir. */
+    padding: 20px;
+    background-color: whitesmoke;
+    text-align: center; /* yazılanı merkeze alır / ortalar  */
+    margin-left: 630px;
+}
+
+article {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px; /* elemanın / border'ın kenarlarının yuvarlatılmasını sağlar */
+    max-width: 1000px; /* elemanın maksimum genişliğini belirler. */
+    margin: 0px auto;
+    /* 0px = üst, alt, sağ ve sol kenar boşluklarının olmadığını belirtir */
+    /* auto = eleman otomatik olarak kapsayıcısının ortasına hizalanır
+    /* border: 1px solid black; */   
+}
+
+#second{
+    flex: 1;
+    height: 280px;
+    width: 50%;
+    padding: 20px;
+    background-color: whitesmoke;
+    text-align: center;
+    margin-top: -400px;
+    margin-left: 10px;
+}
+
+#resim {
+    /* border: 1px solid black; */
+    margin-right: 10px;
+    float: left;
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 200px; 
+    height: 300px
+}
+footer {
+    background-color: lavender;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 400px;
+}
+
+#communication {
+    background-color: lavender;
+    color: black;
+    padding: 20px;
+    text-align: left;
+}
+
